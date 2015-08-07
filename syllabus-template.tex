@@ -1,0 +1,155 @@
+\documentclass[11pt]{article}
+\usepackage{fullpage}
+\usepackage[left=1in,top=1in,right=1in,bottom=1in,headheight=3ex,headsep=3ex]{geometry}
+
+\newcommand{\blankline}{\quad\pagebreak[2]}
+
+\title{ABCD 101: Title of Class}
+\author{Steven V. Miller}
+\date{Fall 2015}
+
+\usepackage[sc]{mathpazo}
+\linespread{1.05}         % Palatino needs more leading (space between lines)
+\usepackage[T1]{fontenc}
+
+\usepackage[mmddyyyy]{datetime}% http://ctan.org/pkg/datetime
+\usepackage{advdate}% http://ctan.org/pkg/advdate
+\newdateformat{syldate}{\twodigit{\THEMONTH}/\twodigit{\THEDAY}}
+\newsavebox{\MONDAY}\savebox{\MONDAY}{Mon}% Mon
+
+\newcommand{\week}[1]{%
+%  \cleardate{mydate}% Clear date
+% \newdate{mydate}{\the\day}{\the\month}{\the\year}% Store date
+  \paragraph*{\kern-2ex\quad #1, \syldate{\today} - \AdvanceDate[4]\syldate{\today}:}% Set heading  \quad #1
+%  \setbox1=\hbox{\shortdayofweekname{\getdateday{mydate}}{\getdatemonth{mydate}}{\getdateyear{mydate}}}%
+  \ifdim\wd1=\wd\MONDAY
+    \AdvanceDate[7]
+  \else
+    \AdvanceDate[7]
+  \fi%
+}
+
+
+
+\usepackage{setspace}
+\usepackage{multicol}
+%\usepackage{indentfirst}
+\usepackage{fancyhdr,lastpage}
+\usepackage{url}
+\pagestyle{fancy}
+\usepackage{hyperref}
+\usepackage{lastpage}
+\usepackage{amsmath}
+\usepackage{layout}   
+\lhead{}
+\chead{}
+\rhead{\footnotesize Title of Class -- Spring 2015}
+\lfoot{}
+\cfoot{\small \thepage/\pageref*{LastPage}}
+\rfoot{}
+
+\usepackage{array, xcolor}
+\usepackage{color,hyperref}
+\definecolor{clemsonorange}{HTML}{EA6A20}
+\hypersetup{colorlinks,breaklinks,
+            linkcolor=clemsonorange,urlcolor=clemsonorange,
+            anchorcolor=clemsonorange,citecolor=black}
+
+
+
+
+
+
+\begin{document}
+
+
+\maketitle
+
+\blankline
+
+\begin{tabular*}{.93\textwidth}{@{\extracolsep{\fill}}lr}
+
+
+  E-mail: \texttt{svmille@clemson.edu} & Web: \href{http://svmiller.com/teaching}{\tt\bf svmiller.com/teaching}  \\
+
+ Office Hours: TBD  &  Class Hours: TBD \\
+
+
+ Office: 230A Brackett Hall & Class Room: NNN Brackett Hall \\
+&  \\
+\hline
+\end{tabular*}
+
+\vspace{10 mm}
+
+\section*{Course Description}
+
+You'll learn stuff in this class, I hope. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas scelerisque elit sapien, eu consequat dui blandit in. Vestibulum dignissim feugiat mauris, at pretium turpis blandit nec. Aliquam porta scelerisque tortor, eget imperdiet quam dapibus et. Sed ut sollicitudin orci, id elementum arcu. Sed arcu quam, vestibulum molestie mattis sed, ultricies sed est. Phasellus eu nunc et urna volutpat pharetra. Donec interdum ante vitae odio malesuada blandit. Fusce at condimentum libero, eu elementum arcu. Aenean posuere id lorem in varius. Sed bibendum neque pretium dolor faucibus, in cursus ipsum suscipit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam erat volutpat. Phasellus mollis egestas risus, non maximus nisl euismod sit amet. Vestibulum laoreet et urna vitae rutrum. Donec quis dui elit.
+
+\section*{Course Objectives}
+\begin{enumerate}
+\item You'll learn this.
+\item And also that
+\item Perhaps some of this too.
+\end{enumerate}
+
+\section*{Required Readings}
+
+\begin{itemize}
+\item Lamport, Leslie. 1986. \LaTeX: A Document Preparation System. Addison-Wesley.
+\end{itemize} 
+
+
+\section*{Course Policy}
+
+I will detail the policy for this course below. Basically, don't cheat and try to learn stuff.
+
+\subsection*{Grading Policy}
+\begin{itemize}
+	\item \underline{\textbf{20\%}} of your grade will be determined by a midterm during normal class hours.
+	\item \underline{\textbf{20\%}} of your grade will be determined by your ability to play air drums against a track of ``Slow Ride'' by Foghat. Do note this test will use the full 8:14 LP version and not the 3:56 radio version.
+	\item \underline{\textbf{10\%}} of your grade will be determined by your attendance and participation in class. Generally, ask questions and answer them.
+	\item \underline{\textbf{20\%}} of your grade will be determined by a term paper on when exactly ``The Love Boat'' jumped the proverbial shark. You will address whether this shark-jumping can be attributed to Ted McGinley, the introduction of Jill Whelan as ``Vicki'', or some other cause.
+	\item \underline{\textbf{30\%}} of your grade will be determined by a final exam.
+\end{itemize}
+
+\subsection*{Academic Dishonesty Policy}
+
+Don't cheat. Don't be that guy. Yes, you. You know exactly what I'm talking about too.
+
+\subsection*{Disabilities Policy}
+
+Federal law mandates the provision of services at the university-level to qualified students with disabilities. Make sure to include all that relevant information here.
+
+
+\newpage
+
+\SetDate[10/08/2015]
+\week{Week 01} Introduction
+\week{Week 02} Some Topic
+
+
+\week{Week 03} Some Other Topic with More Reading
+
+\begin{itemize}
+\item Read this too
+\item And also this
+\end{itemize}
+
+\week{Week 04} Keep
+\week{Week 05} Going
+\week{Week 06} Down
+\week{Week 07} the
+\week{Week 08} Line
+\week{Week 09} until
+\week{Week 10} You
+\week{Week 11} Are
+\week{Week 12} Done
+\week{Week 13} with
+\week{Week 14} Your
+\week{Week 15} Syllabus
+
+
+
+
+\end{document}
